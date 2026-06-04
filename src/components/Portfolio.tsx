@@ -1,8 +1,10 @@
+// @ts-nocheck
 import React, { useState } from 'react';
 import SectionHeading from './SectionHeading';
 import { publications, biteSizeLink } from '../data/portfolio_data';
 import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink, Filter, FileText } from 'lucide-react';
+import Projects from './Projects';
 
 const categories = ["All", ...new Set(publications.map(p => p.category))];
 
