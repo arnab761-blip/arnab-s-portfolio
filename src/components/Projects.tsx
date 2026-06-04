@@ -79,14 +79,6 @@ export default function Projects() {
                 boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
                 transition: 'all 0.2s ease'
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-3px)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.02)';
-              }}
             >
               <p style={{ margin: 0, fontSize: '16px', fontWeight: '500', lineHeight: '1.5' }}>{item.title}</p>
             </a>
@@ -121,14 +113,6 @@ export default function Projects() {
                 backgroundColor: '#ffffff',
                 boxShadow: '0 4px 6px rgba(0,0,0,0.04)',
                 transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.04)';
               }}
             >
               <h3 style={{ margin: '0 0 15px 0', fontSize: '20px', fontWeight: '600', lineHeight: '1.4' }}>{item.title}</h3>
