@@ -1,67 +1,146 @@
-import React from 'react';
-import SectionHeading from './SectionHeading';
-import { projects } from '../data/portfolio_data';
-import { motion } from 'motion/react';
-import { ExternalLink, Github, FolderKanban } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+interface ArticleItem {
+  title: string;
+  link: string;
+  type: string;
+}
 
 export default function Projects() {
-  return (
-    <section id="projects" className="py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading title="Key Projects" subtitle="Showcasing my technical and developmental contributions." />
-        
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group flex flex-col justify-between bg-white dark:bg-gray-800/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:border-teal-500 dark:hover:border-teal-500 hover:shadow-xl transition-all h-full"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-3 bg-teal-50 dark:bg-teal-900/30 rounded-xl">
-                    <FolderKanban className="text-teal-600 dark:text-teal-400" size={28} />
-                  </div>
-                  <div className="flex gap-4">
-                    {project.detailsUrl && (
-                      <a 
-                        href={project.detailsUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                        aria-label="View Details"
-                      >
-                        <Github size={22} />
-                      </a>
-                    )}
-                    {project.liveUrl && project.liveUrl !== "#" && (
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-                        aria-label="View Live Project"
-                      >
-                        <ExternalLink size={22} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+  const [allData, setAllData] = useState<ArticleItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('https://sheetdb.io/api/v1/dob8ywe84feom')
+      .then((res) => {
+        if (!res.ok) throw new Error('ডেটা লোড করতে সমস্যা হয়েছে');
+        return res.json();
+      })
+      .then((data) => {
+        setAllData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
+
+  const biteSizeNews = allData.filter(
+    (item) => item.type?.trim().toLowerCase() === 'bite-size'
+  );
+  const regularArticles = allData.filter(
+    (item) => item.type?.trim().toLowerCase() === 'regular'
+  );
+
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '100px 20px', fontSize: '20px', fontFamily: 'sans-serif', color: '#666' }}>
+        ⏳ আপনার আর্টিকেলগুলো লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...
       </div>
-    </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ textAlign: 'center', padding: '100px 20px', fontSize: '18px', fontFamily: 'sans-serif', color: '#ff4d4d' }}>
+        ❌ ডেটা কানেকশনে সমস্যা হয়েছে। আপনার গুগল শিট ও API চেক করুন।
+      </div>
+    );
+  }
+
+  return (
+    <div className="portfolio-sections-container" style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto', fontFamily: 'sans-serif' }}>
+      
+      {/* সেকশন ১: Bite-size News */}
+      <section className="bite-size-section" style={{ marginBottom: '60px' }}>
+        <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #3b82f6', paddingBottom: '10px', display: 'inline-block' }}>
+          📰 Bite-size News Articles ({biteSizeNews.length})
+        </h2>
+        
+        <div className="news-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+          {biteSizeNews.map((item, index) => (
+            <a 
+              key={index} 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="news-card"
+              style={{ 
+                display: 'block', 
+                padding: '20px', 
+                borderRadius: '12px', 
+                border: '1px solid #e5e7eb', 
+                textDecoration: 'none', 
+                color: '#1f2937',
+                backgroundColor: '#f9fafb',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.02)';
+              }}
+            >
+              <p style={{ margin: 0, fontSize: '16px', fontWeight: '500', lineHeight: '1.5' }}>{item.title}</p>
+            </a>
+          ))}
+          {biteSizeNews.length === 0 && <p style={{ color: '#9ca3af' }}>কোনো Bite-size নিউজ পাওয়া যায়নি।</p>}
+        </div>
+      </section>
+
+      {/* সেকশন ২: Regular Articles */}
+      <section className="regular-articles-section">
+        <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #10b981', paddingBottom: '10px', display: 'inline-block' }}>
+          ✍️ Regular Articles ({regularArticles.length})
+        </h2>
+        
+        <div className="articles-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '25px' }}>
+          {regularArticles.map((item, index) => (
+            <a 
+              key={index} 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="article-card"
+              style={{ 
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                padding: '25px', 
+                borderRadius: '16px', 
+                border: '1px solid #e5e7eb', 
+                textDecoration: 'none', 
+                color: '#111827',
+                backgroundColor: '#ffffff',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.04)',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.04)';
+              }}
+            >
+              <h3 style={{ margin: '0 0 15px 0', fontSize: '20px', fontWeight: '600', lineHeight: '1.4' }}>{item.title}</h3>
+              <span style={{ color: '#10b981', fontSize: '15px', fontWeight: '600', marginTop: 'auto', display: 'inline-flex', alignItems: 'center' }}>
+                বিস্তারিত পড়ুন <span style={{ marginLeft: '5px' }}>↗</span>
+              </span>
+            </a>
+          ))}
+          {regularArticles.length === 0 && <p style={{ color: '#9ca3af' }}>কোনো রেগুলার আর্টিকেল পাওয়া যায়নি।</p>}
+        </div>
+      </section>
+
+    </div>
   );
 }
