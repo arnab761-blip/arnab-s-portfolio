@@ -168,15 +168,13 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* সেকশন ৪: Review Article Writing and Reports (নতুন স্ট্যাটিক সেকশন) */}
-      <section className="reviews-reports-section">
+      {/* সেকশন ৪: Review Article Writing and Reports */}
+      <section className="reviews-reports-section" style={{ marginBottom: '60px' }}>
         <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #f97316', paddingBottom: '10px', display: 'inline-block' }}>
           📊 Review Article Writing and Reports (2)
         </h2>
         
         <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '25px' }}>
-          
-          {/* প্রথম গুগল ডক কার্ড */}
           <a 
             href="https://docs.google.com/document/d/1OvuwqZ3xYk8Q9TcrF8t3YYPXloXhYyIRGv6Zpmx2td4/edit?usp=drivesdk" 
             target="_blank" 
@@ -204,7 +202,6 @@ export default function Projects() {
             </span>
           </a>
 
-          {/* দ্বিতীয় গুগল ডক কার্ড */}
           <a 
             href="https://docs.google.com/document/d/1_JCQi3JJ1waMvQ0ruzl56NWfBdXz8w9Hm_jEN39r5Mc/edit?usp=drivesdk" 
             target="_blank" 
@@ -231,6 +228,82 @@ export default function Projects() {
               ডকুমেন্টটি দেখুন <span style={{ marginLeft: '5px' }}>↗</span>
             </span>
           </a>
+        </div>
+      </section>
+
+      {/* সেকশন ৫: Featured Projects (নতুন স্ট্যাটিক সেকশন, ইন্ডিগো থিম) */}
+      <section className="featured-projects-section">
+        <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #6366f1', paddingBottom: '10px', display: 'inline-block' }}>
+          🚀 Featured Projects (2)
+        </h2>
+        
+        <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '25px' }}>
+          
+          {/* প্রজেক্ট ১ */}
+          <div 
+            className="project-card"
+            style={{ 
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              padding: '25px', 
+              borderRadius: '16px', 
+              border: '1px solid #e5e7eb', 
+              color: '#111827',
+              backgroundColor: '#ffffff',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.04)'
+            }}
+          >
+            <p style={{ margin: '0 0 20px 0', fontSize: '17px', fontWeight: '500', lineHeight: '1.6', color: '#1f2937' }}>
+              Worked as an information and data formation analyst in the Dhaka Series (ep 3) by Science Bee.
+            </p>
+            <a 
+              href="https://www.facebook.com/share/p/18otW2bQnY/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: '#6366f1', fontSize: '15px', fontWeight: '600', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', marginTop: 'auto' }}
+            >
+              Facebook Post <span style={{ marginLeft: '5px' }}>↗</span>
+            </a>
+          </div>
+
+          {/* প্রজেক্ট ২ (মাল্টিপল লিংক সহ) */}
+          <div 
+            className="project-card"
+            style={{ 
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              padding: '25px', 
+              borderRadius: '16px', 
+              border: '1px solid #e5e7eb', 
+              color: '#111827',
+              backgroundColor: '#ffffff',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.04)'
+            }}
+          >
+            <p style={{ margin: '0 0 20px 0', fontSize: '17px', fontWeight: '500', lineHeight: '1.6', color: '#1f2937' }}>
+              Worked as data coordinator in creating a website for the Textile Engineering admission help desk.
+            </p>
+            <div style={{ display: 'flex', gap: '20px', marginTop: 'auto', flexWrap: 'wrap' }}>
+              <a 
+                href="https://www.facebook.com/share/p/1EHJ2cTr15/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: '#6366f1', fontSize: '15px', fontWeight: '600', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
+              >
+                Facebook Post <span style={{ marginLeft: '5px' }}>↗</span>
+              </a>
+              <a 
+                href="https://textille-help-desk-by-habib-s-care.vercel.app/?fbclid=Iwb21leASNNohjbGNrBI02gWV4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHgpY71UVQYoHOAgDw3sxLMtMLwHYLQNPaAhbN9yqAFpJ-05ICzXsOGHWqnuk_aem_iO0K37j1U5IWQKqL4W-DHgw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: '#10b981', fontSize: '15px', fontWeight: '600', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}
+              >
+                Live Website <span style={{ marginLeft: '5px' }}>↗</span>
+              </a>
+            </div>
+          </div>
 
         </div>
       </section>
