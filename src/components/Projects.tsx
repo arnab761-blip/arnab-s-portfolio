@@ -130,8 +130,8 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* সেকশন ৩: Series Content (নতুন যুক্ত করা হলো, বেগুনি থিম) */}
-      <section className="series-content-section">
+      {/* সেকশন ৩: Series Content */}
+      <section className="series-content-section" style={{ marginBottom: '60px' }}>
         <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #8b5cf6', paddingBottom: '10px', display: 'inline-block' }}>
           📚 Series Content ({seriesContent.length})
         </h2>
@@ -165,6 +165,73 @@ export default function Projects() {
             </a>
           ))}
           {seriesContent.length === 0 && <p style={{ color: '#9ca3af' }}>কোনো সিরিজ কন্টেন্ট পাওয়া যায়নি।</p>}
+        </div>
+      </section>
+
+      {/* সেকশন ৪: Review Article Writing and Reports (নতুন স্ট্যাটিক সেকশন) */}
+      <section className="reviews-reports-section">
+        <h2 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '25px', color: '#333', borderBottom: '3px solid #f97316', paddingBottom: '10px', display: 'inline-block' }}>
+          📊 Review Article Writing and Reports (2)
+        </h2>
+        
+        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '25px' }}>
+          
+          {/* প্রথম গুগল ডক কার্ড */}
+          <a 
+            href="https://docs.google.com/document/d/1OvuwqZ3xYk8Q9TcrF8t3YYPXloXhYyIRGv6Zpmx2td4/edit?usp=drivesdk" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="review-card"
+            style={{ 
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              padding: '25px', 
+              borderRadius: '16px', 
+              border: '1px solid #e5e7eb', 
+              textDecoration: 'none', 
+              color: '#111827',
+              backgroundColor: '#ffffff',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.04)',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            <h3 style={{ margin: '0 0 15px 0', fontSize: '20px', fontWeight: '600', lineHeight: '1.4' }}>
+              Review Article / Report - 1
+            </h3>
+            <span style={{ color: '#f97316', fontSize: '15px', fontWeight: '600', marginTop: 'auto', display: 'inline-flex', alignItems: 'center' }}>
+              ডকুমেন্টটি দেখুন <span style={{ marginLeft: '5px' }}>↗</span>
+            </span>
+          </a>
+
+          {/* দ্বিতীয় গুগল ডক কার্ড */}
+          <a 
+            href="https://docs.google.com/document/d/1_JCQi3JJ1waMvQ0ruzl56NWfBdXz8w9Hm_jEN39r5Mc/edit?usp=drivesdk" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="review-card"
+            style={{ 
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              padding: '25px', 
+              borderRadius: '16px', 
+              border: '1px solid #e5e7eb', 
+              textDecoration: 'none', 
+              color: '#111827',
+              backgroundColor: '#ffffff',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.04)',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            <h3 style={{ margin: '0 0 15px 0', fontSize: '20px', fontWeight: '600', lineHeight: '1.4' }}>
+              Review Article / Report - 2
+            </h3>
+            <span style={{ color: '#f97316', fontSize: '15px', fontWeight: '600', marginTop: 'auto', display: 'inline-flex', alignItems: 'center' }}>
+              ডকুমেন্টটি দেখুন <span style={{ marginLeft: '5px' }}>↗</span>
+            </span>
+          </a>
+
         </div>
       </section>
 
