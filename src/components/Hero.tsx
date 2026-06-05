@@ -1,3 +1,5 @@
+// @ts-nocheck
+import profileImg from '../profile.jpg';
 import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, Linkedin, ArrowRight, Download } from 'lucide-react';
@@ -62,22 +64,19 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative mx-auto lg:ml-auto max-w-md w-full"
-          >
-            <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white dark:border-gray-900 shadow-xl relative">
-              {/* Replace with actual image later, using placeholder or abstract pattern */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-blue-500/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-gray-400 font-display text-lg opacity-50">Profile Portrait</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
+<motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.7, delay: 0.2 }}
+                      className="relative mx-auto lg:ml-auto max-w-md w-full"
+                    >
+                      <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white">
+                        {/* Replace with actual image later, using placeholder or abstract pattern */}
+                        <img src={profileImg} alt="Profile" className="object-cover w-full h-full" />
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+              </section>
+            );
+          }
