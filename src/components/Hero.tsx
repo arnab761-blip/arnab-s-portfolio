@@ -1,5 +1,5 @@
 // @ts-nocheck
-import profileImg from '../profile.jpg';
+import profileImg from '../profile.png';
 import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, Linkedin, ArrowRight, Download } from 'lucide-react';
