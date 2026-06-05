@@ -61,22 +61,27 @@ export default function Hero() {
               <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
-            </div>
-          </motion.div>
+</div>
+</motion.div>
+</div>
 
+{/* Right Column: Profile Image Container */}
 <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.7, delay: 0.2 }}
-                      className="relative mx-auto lg:ml-auto max-w-md w-full"
-                    >
-                      <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white">
-                        {/* Replace with actual image later, using placeholder or abstract pattern */}
-                        <img src={profileImg} alt="Profile" className="object-cover w-full h-full" />
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </section>
-            );
-          }
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="relative mx-auto lg:ml-auto max-w-md w-full"
+>
+  <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white">
+    <img 
+      src={profileImg} 
+      alt="Profile" 
+      className="object-cover w-full h-full" 
+    />
+  </div>
+</motion.div>
+
+    </div>
+  </section>
+  );
+}
