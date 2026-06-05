@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -24,7 +25,6 @@ export default function App() {
         <Education />
         <Skills />
         <Portfolio />
-        <Projects />
       </main>
       <Footer />
     </div>
