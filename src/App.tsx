@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import Certificates from './components/Certificates';
 import QuickNav from './components/QuickNav';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -26,6 +27,7 @@ export default function App() {
         <Education />
         <Skills />
         <Portfolio />
+        <Certificates />
       </main>
       <Footer />
     </div>

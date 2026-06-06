@@ -164,3 +164,44 @@ export const projects = [
     description: "Responsive astrophotography showcase with animated hero, filterable gallery, and integrated merchandise section."
   }
 ];
+// এই অ্যারেটা দিয়ে তোর portfolio_data.ts এর সার্টিফিকেট অংশটুকু আপডেট করে নে
+export const certificates = [
+  {
+    id: 1,
+    title: "Astronomy & Astrophysics (IAAC 2025)",
+    issuer: "International Astronomy and Astrophysics Competition",
+    date: "2025",
+    images: [
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600", // ১ম ছবি
+      "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=600"  // ২য় ছবি (নতুন যোগ করা হলো)
+    ],
+    linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_iaac2025-astronomy-astrophysics-ugcPost-7353285828212621312-UAjT",
+  },
+  {
+    id: 2,
+    title: "AI in Cybersecurity",
+    issuer: "AI Certs",
+    date: "2025",
+    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600"],
+    linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_cybersecurity-aicerts-aiincybersecurity-share-7351668686098698241-PtE5",
+  },
+  {
+    id: 3,
+    title: "Cyber Hygiene & Digital Safety",
+    issuer: "Cybersecurity Academy",
+    date: "2025",
+    images: ["https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600"],
+    linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_cyberhygiene-cybersecurity-digitalsafety-share-7346913157992349699-X5PK",
+  },
+  {
+    id: 4,
+    title: "Special Technical Certification",
+    issuer: "Self-Paced / Offline",
+    date: "2026",
+    images: [
+      "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=600", // ১ম ছবি
+      "https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=600"  // ২য় ছবি
+    ],
+    linkedinLink: null,
+  }
+];
