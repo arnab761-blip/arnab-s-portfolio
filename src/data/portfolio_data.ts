@@ -1,3 +1,9 @@
+import astro1 from '../astronomy.jpg';
+import astro2 from '../astrnomy2.jpg'; // তোর স্ক্রিনশটের বানান অনুযায়ী (o ছাড়া)
+import cyberAi from '../cyber.jpg';
+import cyberHygiene from '../cyberhygiene.jpg';
+import review1 from '../reviewarticle.jpg';
+import review2 from '../reviewarticle2.jpg';
 export const personalInfo = {
   name: "Md. Tahmidul Islam Arnab",
   tagline: "Textile Engineering Student | R&D Associate | Web Developer | Science Communicator",
@@ -154,27 +160,24 @@ export const projects = [
     liveUrl: "#"
   },
   {
-    id: 4,
+id: 4,
     title: "Textile Exam Prep Platform (2025-26)",
     description: "Web-based practice platform covering core textile engineering syllabi."
   },
   {
     id: 5,
     title: "Meteorite (2025)",
-    description: "Responsive astrophotography showcase with animated hero, filterable gallery, and integrated merchandise section."
+    description: "Responsive astrophotography showcase with animated hero, filterable gallery, and integrated merchandise section"
   }
 ];
-// এই অ্যারেটা দিয়ে তোর portfolio_data.ts এর সার্টিফিকেট অংশটুকু আপডেট করে নে
+
 export const certificates = [
   {
     id: 1,
     title: "Astronomy & Astrophysics (IAAC 2025)",
     issuer: "International Astronomy and Astrophysics Competition",
     date: "2025",
-    images: [
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600", // ১ম ছবি
-      "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?q=80&w=600"  // ২য় ছবি (নতুন যোগ করা হলো)
-    ],
+    images: [astro1, astro2],
     linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_iaac2025-astronomy-astrophysics-ugcPost-7353285828212621312-UAjT",
   },
   {
@@ -182,7 +185,7 @@ export const certificates = [
     title: "AI in Cybersecurity",
     issuer: "AI Certs",
     date: "2025",
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600"],
+    images: [cyberAi],
     linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_cybersecurity-aicerts-aiincybersecurity-share-7351668686098698241-PtE5",
   },
   {
@@ -190,18 +193,15 @@ export const certificates = [
     title: "Cyber Hygiene & Digital Safety",
     issuer: "Cybersecurity Academy",
     date: "2025",
-    images: ["https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600"],
+    images: [cyberHygiene],
     linkedinLink: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_cyberhygiene-cybersecurity-digitalsafety-share-7346913157992349699-X5PK",
   },
   {
     id: 4,
-    title: "Special Technical Certification",
+    title: "Technical Review & Research Article",
     issuer: "Self-Paced / Offline",
     date: "2026",
-    images: [
-      "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=600", // ১ম ছবি
-      "https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=600"  // ২য় ছবি
-    ],
+    images: [review1, review2],
     linkedinLink: null,
   }
 ];
