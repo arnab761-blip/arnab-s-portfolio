@@ -15,7 +15,9 @@ export default function Portfolio() {
     ? publications 
     : publications.filter(p => p.category === activeCategory);
 
-  return (
-    <Projects />
+return (
+    <div id="portfolio">
+      <Projects />
+    </div>
   );
 }

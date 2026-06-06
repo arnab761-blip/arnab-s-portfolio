@@ -18,7 +18,6 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 font-sans selection:bg-teal-200 selection:text-teal-900">
-      <Navbar />
       <main>
         <Hero />
         <QuickNav />

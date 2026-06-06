@@ -13,6 +13,7 @@ export default function Hero() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -37,15 +38,16 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
               <a
-                href="#projects"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-colors"
+                href="#portfolio"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white"
               >
                 View My Work
                 <ArrowRight size={18} />
               </a>
+
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white dark:bg-gray-800 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white dark:bg-gray-800 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-gray-100"
               >
                 Let's Talk
               </a>
@@ -61,27 +63,27 @@ export default function Hero() {
               <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
-</div>
-</motion.div>
-</div>
+            </div>
+          </motion.div>
 
-{/* Right Column: Profile Image Container */}
-<motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.7, delay: 0.2 }}
-  className="relative mx-auto lg:ml-auto max-w-md w-full"
->
-  <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white">
-    <img 
-      src={profileImg} 
-      alt="Profile" 
-      className="object-cover w-full h-full" 
-    />
-  </div>
-</motion.div>
+          {/* Right Column: Profile Image Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative mx-auto lg:ml-auto max-w-md w-full"
+          >
+            <div className="aspect-square overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 border-4 border-white">
+              <img 
+                src={profileImg} 
+                alt="Profile" 
+                className="object-cover w-full h-full" 
+              />
+            </div>
+          </motion.div>
 
-    </div>
-  </section>
+        </div>
+      </div>
+    </section>
   );
 }
