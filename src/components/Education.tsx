@@ -6,7 +6,7 @@ import { GraduationCap, Award, Activity } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section className="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+<section id="education" className="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Education & Achievements" />
         

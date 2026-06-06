@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import QuickNav from './components/QuickNav';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,10 +17,11 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 font-sans selection:bg-teal-200 selection:text-teal-900 dark:selection:bg-teal-900/50 dark:selection:text-teal-200">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 font-sans selection:bg-teal-200 selection:text-teal-900">
       <Navbar />
       <main>
         <Hero />
+        <QuickNav />
         <About />
         <Experience />
         <Education />
