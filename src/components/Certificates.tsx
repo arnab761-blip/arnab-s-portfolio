@@ -13,9 +13,6 @@ export default function Certificates() {
           <h2 className="font-display text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Certifications & <span className="text-teal-600 dark:text-teal-400">Achievements</span>
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            আমার অর্জিত কিছু গুরুত্বপূর্ণ সার্টিফিকেশন এবং একাডেমিক স্বীকৃতিসমূহ।
-          </p>
         </div>
 
         {/* রেসপনসিভ গ্রিড */}

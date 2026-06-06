@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, Briefcase, GraduationCap, Code, Layers } from 'lucide-react';
+import { ChevronDown, Briefcase, GraduationCap, Code, Layers, Award } from 'lucide-react';
 
 export default function QuickNav() {
   return (
@@ -25,6 +25,11 @@ export default function QuickNav() {
 
             <a href="#skills" className="flex items-center gap-1 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
               <Code size={16} /> Skills
+            </a>
+
+            {/* নতুন যোগ করা Certificates অপশন */}
+            <a href="#certificates" className="flex items-center gap-1 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+              <Award size={16} /> Certificates
             </a>
 
             {/* View My Work - Dropdown Menu */}
