@@ -10,14 +10,14 @@ export const personalInfo = {
   email: "arnabarnab761@gmail.com",
   phone: "+880 1780-692994",
   linkedin: "https://linkedin.com/in/md-tahmidul-islam-arnab-580587320",
-  about: "I'm a Textile Engineering student who loves mixing science with creativity. Alongside my classes, I work in research, science writing, and social media marketing. I really enjoy taking complex scientific ideas and explaining them in a way that everyone can understand. Whether I'm working on a research project or running a digital campaign, I'm always eager to learn, solve problems, and bring fresh ideas to the table."
+  about: "I'm a Textile Engineering student who loves mixing science with creativity. Alongside my classes, I work in research, science writing, and social media marketing. I really enjoy taking complex scientific ideas and explaining them in a way that everyone can understand. Whether I'm working on a research project or running a digital campaign, I'm always eager to learn, solve problems, and bring fresh ideas to the table.",
 };
 
 export const workExperience = [
   {
     id: 1,
     company: "fabricXai",
-    role: "Research & Development Associate"
+    role: "Research & Development Associate",
     type: "Remote",
     period: "Aug 2025 - Present",
     description: [
