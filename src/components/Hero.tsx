@@ -38,7 +38,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
               <a
-                href="#portfolio"
+href="#designs"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white"
               >
                 View My Work

@@ -27,7 +27,7 @@ export default function App() {
         <Education />
         <Skills />
 {/* Designed photocards and infographics Section */}
-        <div className="mb-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div id="designs" className="mb-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b-2 border-blue-500 pb-2 inline-block mb-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
               🎨 Designed photocards and infographics
