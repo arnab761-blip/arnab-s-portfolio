@@ -40,7 +40,7 @@ export default function QuickNav() {
 
               {/* ড্রপডাউন লিস্ট */}
               <div className="absolute right-0 top-full mt-1 hidden w-52 rounded-xl border border-gray-100 bg-white p-2 shadow-xl group-hover:block dark:border-gray-800 dark:bg-gray-800">
-                <a href="#portfolio" className="block rounded-lg px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-xs">
+                <a href="#designs" className="block rounded-lg px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-xs">
                   📁 All Projects & Articles
                 </a>
               </div>
