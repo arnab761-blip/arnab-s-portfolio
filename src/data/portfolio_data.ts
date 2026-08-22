@@ -1,3 +1,6 @@
+import cProgrammingImg from '../c-programming.png'; 
+import animationImg from '../2d-animation.png';
+import nasaImg from '../nasa.png';
 import astro1 from '../astronomy.jpg';
 import astro2 from '../astrnomy2.jpg'; // তোর স্ক্রিনশটের বানান অনুযায়ী (o ছাড়া)
 import cyberAi from '../cyber.jpg';
@@ -203,5 +206,29 @@ export const certificates = [
     date: "2026",
     images: [review1, review2],
     linkedinLink: null,
-  }
+  },
+  {
+    id: 5,
+    title: "সহজ ভাষায় C Programming",
+    issuer: "10 Minute School",
+    date: "2024",
+    image: cProgrammingImg,
+    link: "https://www.linkedin.com/posts/md-tahmidul-islam-arnab-580587320_%E0%A6%B8%E0%A6%B9%E0%A6%9C-%E0%A6%AD%E0%A6%B7%E0%A7%9F-c-programming-activity-7233323724991602688-4n-m?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFE-NnABtHR_LaT-gAB94bQLiyzRxxwpdog",
+  },
+  {
+    id: 6,
+    title: "Introduction to 2D Animation",
+    issuer: "Grameenphone Academy",
+    date: "2025",
+    image: animationImg,
+    link: "https://drive.google.com/file/d/11efnGCCA-OZE10LKwM-05PFvTfT_nUfs/view?usp=drive_link",
+  },
+  {
+    id: 7,
+    title: "Open Science Essentials",
+    issuer: "NASA",
+    date: "2026",
+    image: nasaImg,
+    link: "https://lnkd.in/p/gmuZ68GU",
+  },
 ];
