@@ -54,7 +54,7 @@ export default function Certificates() {
                   </span>
                 </div>
 
-                {/* লিঙ্কডইন পোস্ট বাটন বা লোকাল ইন্ডিকেটর */}
+                {/* লিঙ্ক বাটন বা লোকাল ইন্ডিকেটর */}
                 <div className="mt-6 pt-4 border-t border-gray-50 dark:border-gray-800/50">
                   {cert.linkedinLink ? (
                     <a
@@ -63,7 +63,7 @@ export default function Certificates() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
                     >
-                      View LinkedIn Post
+                      {cert.linkLabel || "View LinkedIn Post"}
                       <ExternalLink size={14} />
                     </a>
                   ) : (

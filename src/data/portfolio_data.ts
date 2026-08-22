@@ -1,3 +1,4 @@
+import credlyBadgeImg from '../credly digital badge.png';
 import cProgrammingImg from '../c-programming.png'; 
 import animationImg from '../2d-animation.png';
 import nasaImg from '../nasa.png';
@@ -230,5 +231,14 @@ export const certificates = [
     date: "2026",
     images: [nasaImg],
     linkedinLink: "https://lnkd.in/p/gmuZ68GU",
+  },
+  {
+    id: 8,
+    title: "NASA Open Science Essentials Digital Badge",
+    issuer: "NASA Open Science (Credly)",
+    date: "2026",
+    images: [credlyBadgeImg],
+    linkedinLink: "https://www.credly.com/badges/680ab7c2-f93c-4ba4-a0f1-73092682c3e4/linked_in?t=tk2shv",
+    linkLabel: "View Digital Badge",
   },
 ];
